@@ -1,0 +1,380 @@
+@font-face{
+    font-family:sahel;
+    src:url("../fonts/Sahel.eot"),url("../fonts/Sahel.ttf") format("ttf"),url("../fonts/Sahel.woff") format("woff");
+    font-weight: normal;
+}
+
+@font-face{
+    font-family:lalezar;
+    src:url("../fonts/Lalezar-Regular.ttf") format("truetype");
+    font-weight: bold;
+}
+
+/* Color Palette l↓↓↓↓↓↓↓↓↓ */
+/*  Blue Sapphire: #05668d rgb(5,102,142)
+    Metallic Seaweed: #028090
+    Persian Green: #00A896
+    Moutain Meadow: #02C39A
+    Pale Spring Bud: #F0F3BD */
+
+/* Genera Tags l↓↓↓↓↓↓↓↓↓ */
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+h1,h2,h3,h4,h5,h6{
+    font-family: lalezar;
+    padding-bottom: 10px;
+}
+
+body{
+    direction: rtl; 
+    font-size: 15px;
+    font-family: sahel;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+section {
+    padding: 30px;
+}
+
+/* General Classes ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓ */
+.section-heading{
+    text-align: center;
+    padding-top: 40px;
+    
+}
+
+.btn{
+    display: inline-block;
+    margin-top: 15px;
+    padding: 5px 30px;
+    background: linear-gradient(to right, #00a896, #05668d);
+    color: #F0F3BD;
+    border-radius: 40px;
+    border: none;
+    font-family: sahel;
+    cursor: pointer;
+}
+
+.btn:hover{
+    background: linear-gradient(to right, #028090, #02C39A);
+}
+
+.btn>i{
+    margin: 0 5px;
+}
+
+.section-heading span {
+    border-bottom: 2px solid #05668d;
+    text-align: center;
+    color: #05668d;
+    display: inline-block;
+    width: 25%;
+    padding-bottom: 15px;
+    
+    
+}
+
+.container{
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+
+/* Nav ↓↓↓↓↓↓↓↓↓ */
+nav{
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: space-between;
+    font-family: sahel;
+    background: linear-gradient(to right, #00a896, #05668d);
+    width: 100%;
+    position: fixed;
+    z-index: 1;
+}
+
+nav > ul{
+    display:inline-block;
+    list-style-type: none;
+}
+
+nav > ul > li{
+    display: inline-block;
+    
+    color: #F0F3BD;
+}
+
+nav > ul > li > a{
+    display: inline-block;
+    padding: 20px;
+    transition: .5s;
+}
+
+nav ul li a i{
+    margin-left: 5px;
+}
+
+nav > ul > li:hover{
+    background-color: #f4f8f8;
+    color:black;
+    
+}
+
+div.dropdown{
+    display:none;
+    color: black;
+    background-color: #F0F3BD;
+    position: absolute;
+    top:62px;
+    min-width: 170px;
+    z-index: 3;
+    box-shadow: 5px 5px 20px gray;
+}
+li.dropdownlink{
+    position: relative;
+}
+
+li.dropdown-link:hover > div.dropdown{
+    display: block;
+}
+
+div.dropdown > ul{
+    list-style-type: none; 
+}
+
+div.dropdown > ul > li{
+    border-bottom: 1px solid rgb(197, 195, 195);
+    
+}
+
+div.dropdown > ul > li > a{
+    display: block;
+    padding: 10px 20px;
+    color: rgb(29, 28, 28);
+}
+
+div.dropdown > ul > li > a:hover{
+    background-color:#05668d;
+    color:#F0F3BD;
+}
+
+nav > div.brand{
+    display: inline-block;
+    color: #F0F3BD;
+    padding: 15px;
+    font-family: lalezar ;
+    font-size: 1.5em;
+    margin-left: 25px;
+}
+
+/* Header ↓↓↓↓↓↓↓↓↓↓↓↓ */
+
+header{
+    text-align: center;
+    background-image: url('../img/header.jpg');
+    background-repeat: no-repeat;
+    padding: 150px 0;
+    color: snow;
+    background-size: cover;
+    font-family: sahel;
+}
+
+div.intro{
+    padding: 40px 80px;
+    display: inline-block;
+    background-color: rgba(5, 102, 142, .3);
+    border-radius: 50px;
+    position: relative;
+}
+
+div.intro > span{
+    position: absolute;
+    background-color: White;
+    color:#028090;
+    border-radius: 100%;
+    padding: 10px 15px;
+    top: -15px;
+    right: -15px;
+}
+
+div.intro > p{
+    font-weight: bold;
+    font-size: 1.25em;
+}
+
+
+
+
+
+/* Section ↓↓↓↓↓↓↓↓↓↓↓↓ */
+
+#courses>.section-container{
+    margin-top: 30px;
+     display: grid;
+    grid-template-columns: 40% auto;
+    justify-content: space-between;
+}
+
+
+#courses > .section-container>.img-container > img {
+    width: 95%;
+    margin-top: 15px;
+    border-radius: 25px;
+    min-height: 460px;
+    border : 2px solid #05668d;
+}
+
+
+
+#courses>.section-container > .cards-container > .card {
+    border : 2px solid #05668d;
+    margin: 10px 0px;
+    padding: 0px 20px;
+    border-radius: 5px;
+    transition: .5s;
+}
+
+#courses>.section-container > .cards-container > .card:hover{
+    background: linear-gradient(to right, #00a896, #05668d);
+    color: #F0F3BD;
+
+}
+
+#courses>.section-container > .cards-container > .card:hover >h3{
+    color: #F0F3BD;
+}
+#courses>.section-container > .cards-container > .card > p {
+    font-size: 12px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-align:justify;
+    text-indent: 10px;
+    
+}
+
+#courses>.section-container > .cards-container > .card > h3{
+    color:#05668d;
+    padding-top: 10px;
+    transition: .5s;
+}
+#courses>.section-container > .cards-container > .card > div{
+    text-align: left;
+    padding-bottom: 10px;
+}
+
+
+/* SignUp ↓↓↓↓↓↓↓↓↓↓↓↓ */
+.signup-form-container{
+    padding: 30px;
+    
+}
+.signup-form{
+    margin: 5px;
+}
+
+.signup-form .field{
+    text-align: center;
+    padding: 30px 0;
+    margin-top: 30px;
+    font-weight: bold;
+    background: linear-gradient(to right, #00a896, #05668d);
+    border-color:#05668d;
+}
+
+.field legend{
+    font-family: lalezar;
+    
+    font-size: 1.25em;
+
+}
+ .legend-heading{
+     display: inline-block;
+     padding:5px 30px;
+     border-radius: 40px;
+    background: linear-gradient(to right, #00a896, #05668d)
+ }
+.form-group{
+    display: inline-block;
+    width: 33%;
+}
+
+.form-group label{
+    display: block;
+    font-weight: bold;
+}
+
+.form-group label i{
+    margin-left: 5px;
+    font-size: 1.25em;
+    color: #05668d;
+}
+.form-group input,select{
+    margin-top: 10px;
+    display: inline-block;
+    width: 80%;
+    border: 2px solid #05668d;
+    font-size: 16px;
+    line-height: 2em;
+    margin-bottom: 10px;
+    font-family: sahel;
+    
+}
+
+.form-group input{
+    padding-right: 5px;
+
+    
+}
+
+.form-group input:focus,select:focus{
+    outline: 0;
+    border-color:#00a896;
+}
+
+.form-group select{
+
+}
+
+/* Footer ↓↓↓↓↓↓↓↓↓↓↓↓ */
+footer{
+    padding: 25px;
+    background-color: #05668d;
+    position: relative;
+    color: #F0F3BD;
+    text-align: center;
+}
+
+footer>div{
+    padding: 10px;
+}
+
+.follow-us{
+
+}
+
+.follow-us i{
+    font-size: 2em;
+    margin: 10px;
+}
+
+.back-to-top{
+    background-color:#F0F3BD;
+    
+    color:#05668d;
+    position: absolute;
+    bottom: 25px;
+    right: 25px;
+    padding: 15px 20px;
+    border-radius: 100%;
+}
